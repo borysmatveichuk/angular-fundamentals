@@ -10,7 +10,6 @@ import { GitSearch } from '../git-search';
 export class GitSearchComponent implements OnInit {
   searchResults: GitSearch;
 
-
   constructor(private gitSearchService: GitSearchService) { }
 
   ngOnInit() {
