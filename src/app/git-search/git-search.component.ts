@@ -9,16 +9,13 @@ import { GitSearch } from '../git-search';
 })
 export class GitSearchComponent implements OnInit {
   searchResults: GitSearch;
+  searchQuery: string;
 
   constructor(private gitSearchService: GitSearchService) { }
 
   ngOnInit() {
-    this.gitSearchService.gitSearch('angular').then( (response) => {
-      this.searchResults = response;
-    }, (error) => {
-      alert('Error: ' + error.statusText);
-    });
-    
+    this.searchQuery = 'angular';
+    this.gitSearch();
     // this.gitSearchService.gitUsers('john').then( (response) => {
     //   alert('Total users found: ' + response.total_count);
     // }, (error) => {
@@ -26,8 +23,8 @@ export class GitSearchComponent implements OnInit {
     // });
   }
   
-  gitSearch = (query: string) => {
-    this.gitSearchService.gitSearch(query).then( (response) => {
+  gitSearch = () => {
+    this.gitSearchService.gitSearch(this.searchQuery).then( (response) => {
       this.searchResults = response;
     }, (error) => {
       alert('Error: ' + error.statusText);
