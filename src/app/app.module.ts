@@ -8,11 +8,15 @@ import { HttpClientModule} from '@angular/common/http';
 import { GitSearchService } from './git-search.service';
 import { GitSearchComponent } from './git-search/git-search.component';
 import { TestInnerModule } from './test-inner/test-inner.module';
+import { HomePageComponent } from './home-page/home-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitSearchComponent,
+    HomePageComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
