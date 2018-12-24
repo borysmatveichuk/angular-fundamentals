@@ -1,6 +1,11 @@
 <h3>{{title}} - {{displayQuery}}</h3>
-<input name="query" placeholder="Enter Search Here" [(ngModel)]="searchQuery" />
-<button (click)="sendQuery()">Submit</button>
+<form (ngSubmit)="sendQuery()">
+  <div *ngFor="let key of modelKeys">
+    {{key}}<input name="{{key}}" placeholder="Enter {{key}} Here"
+                  [(ngModel)]="model[key]"/>
+  </div>
+  <button (click)="sendQuery()">Submit</button>
+</form>
 <div *ngIf="searchResults; else elseBlock">
   <h3 *ngIf="searchResults.total_count !== 0; else noResultBlock" class="total">Total Results:
     {{searchResults.total_count}}</h3>
@@ -19,7 +24,6 @@
       </a>
       <p class="description"> {{result.description}}</p>
       <p> Created On: {{result.created_at | date:'fullDate'}}</p>
-      <app-test-inner [testTitle]="result.id"></app-test-inner>
     </li>
   </ul>
 </div>
