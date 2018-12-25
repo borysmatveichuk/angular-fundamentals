@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { GitSearchComponent } from './git-search/git-search.component';
+import { GitSearchComponent } from './git-search_reactive/git-search.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 

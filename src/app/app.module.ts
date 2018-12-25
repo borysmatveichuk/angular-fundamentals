@@ -6,14 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
 import { GitSearchService } from './git-search.service';
-import { GitSearchComponent } from './git-search/git-search.component';
+import { GitSearchComponent } from './git-search_reactive/git-search.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {GitSearchTemplateComponent} from './git-search_template/git-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitSearchComponent,
+    GitSearchTemplateComponent,
     HomePageComponent,
     NotFoundComponent,
   ],
@@ -22,6 +24,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [GitSearchService],
   bootstrap: [AppComponent]
