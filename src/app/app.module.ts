@@ -10,6 +10,7 @@ import { GitSearchComponent } from './git-search_reactive/git-search.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {GitSearchTemplateComponent} from './git-search_template/git-search.component';
+import { NoSpecialCharsDirective } from './no-special-chars.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {GitSearchTemplateComponent} from './git-search_template/git-search.compo
     GitSearchTemplateComponent,
     HomePageComponent,
     NotFoundComponent,
+    NoSpecialCharsDirective,
   ],
   imports: [
     BrowserModule,

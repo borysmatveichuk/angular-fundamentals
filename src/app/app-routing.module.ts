@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { GitSearchComponent } from './git-search_reactive/git-search.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {NotFoundComponent} from './not-found/not-found.component';
+import {GitSearchTemplateComponent} from './git-search_template/git-search.component';
 
 const routes: Routes = [
   { path: '',
@@ -13,7 +14,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'search/:query',
-    component: GitSearchComponent,
+    component: GitSearchTemplateComponent,
     data: {
       title: 'Git Search'
     }
